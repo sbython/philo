@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 18:16:27 by msbai             #+#    #+#             */
-/*   Updated: 2024/07/16 18:46:24 by msbai            ###   ########.fr       */
+/*   Updated: 2024/07/29 18:00:22 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int ft_strlen(char *s)
     int i;
 
     i = 0;
-    while (s[i])
+    while (s && s[i])
         i++;
     return (i);
 }
@@ -29,6 +29,7 @@ long ft_atoi(char *s)
     int     i; 
     
     i = 0;
+    res = 0;
     if (s[i] == '+')
         i++;
     while (s[i])
@@ -38,5 +39,7 @@ long ft_atoi(char *s)
             return  (21474836479);
         i++;
     }
+    if (!res)
+        return (21474836479);
     return (res);
 }

@@ -1,13 +1,14 @@
 
 
 CC = cc
-CFLAG = -Wall -Wextra -Werror -g3
+CFLAG = -Wall -Wextra -Werror -g3 #-fsanitize=address
 
 FILE = ckeck_arg.c \
 		philo.c \
 		run_phil.c \
 		creat_philo.c\
-		mini_lib1.c
+		mini_lib1.c\
+		function_philo.c
 
 NAME = philo
 OBJ = $(FILE:.c=.o)

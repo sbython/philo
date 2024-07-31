@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 11:56:33 by msbai             #+#    #+#             */
-/*   Updated: 2024/07/16 18:48:10 by msbai            ###   ########.fr       */
+/*   Updated: 2024/07/20 13:38:38 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,10 @@ int check_arg(char **av)
     i = 1;
     while(av[i])
     {
-        if(not_number(av[i]) || ft_atoi(av[i]) == 21474836479)
+        if(not_number(av[i]) )
             return (1);
         i++;
     }
+
     return (0);
 }

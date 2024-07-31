@@ -1,21 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   run_phil.c                                         :+:      :+:    :+:   */
+/*   function_philo.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/16 11:49:26 by msbai             #+#    #+#             */
-/*   Updated: 2024/07/17 13:34:44 by msbai            ###   ########.fr       */
+/*   Created: 2024/07/17 11:41:51 by msbai             #+#    #+#             */
+/*   Updated: 2024/07/28 13:08:06 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "header.h"
 
-void run_philo(char **av)
+void * thread_philo(void * arg)
 {
-    if (check_arg(av))
-        return ;
-    creat_philo(av);
+    t_philo *thread;
+    int     i;
+
+    i = 0;
+    thread = (t_philo *)arg;
+    while (i != thread->box->number_looping)
+    {
+        write_eat();
+       i++;
+    }
     
+    return NULL;
 }
