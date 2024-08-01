@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 11:41:51 by msbai             #+#    #+#             */
-/*   Updated: 2024/07/28 13:08:06 by msbai            ###   ########.fr       */
+/*   Updated: 2024/07/31 18:45:41 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,12 @@ void * thread_philo(void * arg)
     thread = (t_philo *)arg;
     while (i != thread->box->number_looping)
     {
-        write_eat();
+        if (!thread->stop)
+            take_fork();
+        if (!thread->stop)
+            write_eat();
+        if (!thread->stop)
+            write_sleep();
        i++;
     }
     

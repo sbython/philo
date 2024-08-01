@@ -6,7 +6,7 @@
 /*   By: msbai <msbai@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/16 11:32:30 by msbai             #+#    #+#             */
-/*   Updated: 2024/07/27 23:07:32 by msbai            ###   ########.fr       */
+/*   Updated: 2024/07/31 18:39:06 by msbai            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@
 #include <stdlib.h>
 
 //------struct---------//
+typedef pthread_mutex_t mutex;
+
+
 
 typedef struct s_box
 {
@@ -29,6 +32,7 @@ typedef struct s_box
 	long      time_to_sleep;
 	long      number_looping;
 	int			someone_die;
+	
 }t_box;
 
 typedef struct s_philo
